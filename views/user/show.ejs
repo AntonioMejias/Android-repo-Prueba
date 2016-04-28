@@ -1,0 +1,13 @@
+<div class="padfix">
+	<div class="container">
+		<h3>Informacion de usuario</h3>
+		<ul>
+			<li> <%= usuario.name%> </li>
+			<li> <%= usuario.last_name%> </li>
+			<li> <%= usuario.email%> </li>
+		</ul>
+
+		<a href= "/user/edit/<%=usuario.id%>"class= "btn btn-success">Editar Usario</a>
+		<a href= "/user/"class= "btn btn-primary">Regresar</a>
+	</div>
+</div>

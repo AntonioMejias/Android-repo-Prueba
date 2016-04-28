@@ -1,0 +1,29 @@
+<div class="padfix">
+	<table class="table table-bordered">
+		<thead>
+	 		<tr>
+	 			<th>Nombre</th><th>Username</th><th>Email</th>
+	 		</tr>
+	 	</thead>
+		<tbody>
+			<% _.each(users,function (user){ %>
+			<tr>
+				<td><%=user.name + user.last_name%></td>
+				<td><%=user.username%></td>
+				<td><%=user.email%></td>
+				<td> 
+					<form action="/user/delete/<%= user.id%>" method="post">
+						<input  class="btn btn-warning" name="delete" value="Eliminar" type="submit">
+					</form>
+				</td>
+
+				<td> 
+					<form action="/user/show/<%= user.id%>" method="post">
+						<input  class="btn btn-succes" name="edit" value="Editar" type="submit">
+					</form>
+				</td>
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+</div>
